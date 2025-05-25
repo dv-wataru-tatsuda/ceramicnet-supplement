@@ -763,7 +763,6 @@ def cluster_and_plot_dendrogram(features_reshaped, labels, epoch, fold):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     os.makedirs("output", exist_ok=True)
     
-    # 簡略化したファイル名
     filename = f"output/dendrogram_epoch{epoch+1}_fold{fold}_{timestamp}.png"
     plt.savefig(filename, dpi=300, format="png")
     plt.close()
@@ -819,7 +818,6 @@ def apply_pca_and_plot(features_reshaped, labels, epoch, fold):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     os.makedirs("output", exist_ok=True)
     
-    # 簡略化したファイル名
     filename = f"output/pca_epoch{epoch+1}_fold{fold}_{timestamp}.png"
     plt.savefig(filename, dpi=600, format="png")
     plt.close()
@@ -881,7 +879,6 @@ def plot_saliency_map(xyz, saliency, epoch, class_id, sample_name, fold):
     os.makedirs("output", exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
-    # 簡略化したファイル名
     if sample_name:
         filename = f"output/gradcam_{sample_name}_epoch{epoch}_fold{fold}_{timestamp}.png"
     else:
@@ -1109,7 +1106,7 @@ def visualize(
                     f"  Created saliency map for {sample_name} (predicted class {predicted_class})"
                 )
 
-                # Generate Grad-CAM for alternative class (2 if predicted was 3, 3 if predicted was 2)
+                # Generate Grad-CAM for alternative class (DB if predicted was B, B if predicted was DB)
                 alternative_class = 3 if predicted_class == 2 else 2
                 sal = grad_cam_pointcloud(
                     model,
