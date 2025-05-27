@@ -1,5 +1,7 @@
 ## Supplement To "Deep learning-based morphological classification of ceramics: A case study of 3D Point Cloud Analysis for Sue ware, Japan"
 
+[![DOI](https://zenodo.org/badge/989476385.svg)](https://doi.org/10.5281/zenodo.15523451)
+
 ### Contents
 
 ```sh
