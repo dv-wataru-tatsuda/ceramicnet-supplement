@@ -20,9 +20,9 @@
 │   ├── DBR                                  # Dish Body with Ring Base samples
 │   ├── DC                                   # Dish Cap samples
 │   └── P                                    # Plate samples
-├── other_ceramicnet_data                    # additional datasets for further experiments
-│   └── DCFLIP                               # upside-down DC samples
-└── result_used_in_article                   # materials used in the mainscript
+├── other_data                               # additional datasets for further experiments
+│   └── DCFLIP                               # upside-down DC samples used in dcflip_analysis
+└── results_used_in_article                  # materials used in the mainscript
     ├── main_analysis                        # main experiment outputs
     │   ├── mainscript_executed.ipynb        # Table 1 and 2 are available in this notebook
     │   ├── accuracy_epoch*.png              # accuracy curves for each fold; not used in the mainscript
@@ -46,16 +46,19 @@ The analysis can be run using either CPU or GPU support. The mode is automatical
 To run the analysis using Docker with CPU support, follow these steps:
 
 1. Create an output directory on your host machine to store the output files
+
    ```bash
    mkdir -p output
    ```
 
 2. Build the Docker image
+
    ```bash
    docker build -t ceramicnet-cpu -f docker/cpu.Dockerfile .
    ```
 
 3. Run the container with a volume mount
+
    ```bash
    # bash:
    docker run --rm -v $(pwd)/output:/app/output ceramicnet-cpu
@@ -71,16 +74,19 @@ To run the analysis using Docker with GPU support, follow these steps:
 1. Ensure you have NVIDIA Container Toolkit installed and your GPU drivers are up to date.
 
 2. Create an output directory on your host machine to store the output files
+
    ```bash
    mkdir -p output
    ```
 
 3. Build the Docker image
+
    ```bash
    docker build -t ceramicnet-gpu -f docker/gpu.Dockerfile .
    ```
 
 4. Run the container with GPU support and volume mount
+
    ```bash
    # bash:
    docker run --rm --gpus all -v $(pwd)/output:/app/output ceramicnet-gpu
@@ -92,6 +98,7 @@ To run the analysis using Docker with GPU support, follow these steps:
 The container will automatically execute the analysis script and save all output files (plots, metrics, etc.) to the `output` directory on your host machine. The `--rm` flag ensures the container is removed after execution.
 
 Note: We used the following GPU to confirm the script.
+
 ```sh
 $ nvidia-smi
 Sun Jan  7 23:40:57 2024
@@ -120,16 +127,19 @@ Build cuda_12.3.r12.3/compiler.33567101_0
 To run the Jupyter Notebook analysis using Docker, follow these steps:
 
 1. Create an output directory on your host machine to store the output files
+
    ```bash
    mkdir -p output
    ```
 
 2. Build the Docker image for the notebook
+
    ```bash
    docker build -t ceramicnet-notebook -f docker/mainscript.Dockerfile .
    ```
 
 3. Run the container with a volume mount
+
    ```bash
    # bash:
    docker run --rm -v $(pwd)/output:/app/output ceramicnet-notebook
@@ -139,6 +149,7 @@ To run the Jupyter Notebook analysis using Docker, follow these steps:
    ```
 
 The container will automatically execute the notebook and save:
+
 - The executed notebook as `mainscript_executed.ipynb` in the container
 - All output files (plots, metrics, etc.) to the `output` directory on your host machine
 - The `--rm` flag ensures the container is removed after execution
@@ -157,9 +168,9 @@ X-M-1-2023-207-2023
 
 ### License
 
-| Asset | License | File |
-|-------|---------|------|
-| Source code | MIT | LICENSE |
+| Asset                           | License   | File            |
+| ------------------------------- | --------- | --------------- |
+| Source code                     | MIT       | LICENSE         |
 | Data, figures, notebook outputs | CC BY 4.0 | LICENSE-DATA.md |
 
 If you use this code or dataset, please cite the accompanying publication (see `CITATION.cff`).
