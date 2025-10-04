@@ -39,6 +39,10 @@
 
 ### How to start analysis
 
+**Important: Before running the analysis, please ensure your Docker environment meets the minimum resource requirements shown below. If possible, we recommend allocating 20GB of memory for optimal performance.**
+
+![Docker Resource Requirements](docker_resource_minimum_requirements.png)
+
 The analysis can be run using either CPU or GPU support. The mode is automatically set based on the Dockerfile used.
 
 #### CPU Version
