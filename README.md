@@ -1,6 +1,10 @@
-## Supplement To "Deep learning-based morphological classification of ceramics: A case study of 3D Point Cloud Analysis for Sue ware, Japan"
+### Overview
 
 [![DOI](https://zenodo.org/badge/989476385.svg)](https://doi.org/10.5281/zenodo.15523451)
+
+This repository contains the supplementary material of the following paper:
+
+[**Deep learning-based morphological classification of ceramics: A case study of 3D Point Cloud Analysis for Sue ware, Japan**](https://doi.org/10.1016/j.jas.2026.106472)
 
 ### Contents
 
@@ -172,9 +176,7 @@ X-M-1-2023-207-2023
 
 ### License
 
-| Asset                           | License   | File            |
-| ------------------------------- | --------- | --------------- |
-| Source code                     | MIT       | LICENSE         |
-| Data, figures, notebook outputs | CC BY 4.0 | LICENSE-DATA.md |
-
+Supplementary material (including source code) is licensed under CC BY 4.0.
+For substantial reuse, please cite the original paper.
+This repository is provided primarily for research and reproducibility purposes.
 If you use this code or dataset, please cite the accompanying publication (see `CITATION.cff`).
