@@ -1,8 +1,8 @@
 cff-version: 1.2.1
 title: "Deep learning-based morphological classification of ceramics: A case study of 3D Point Cloud Analysis for Sue ware, Japan"
 version: "1.0.5"
-doi: 10.1016/j.jas.2026.106472
-license: CC BY 4.0
+doi: "10.1016/j.jas.2026.106472"
+license: "CC-BY-4.0"
 authors:
   - family-names: Tatsuda
     given-names: Wataru
@@ -13,3 +13,4 @@ authors:
     given-names: Kimiyasu 
   - family-names: Inoue
     given-names: Hayata 
+
