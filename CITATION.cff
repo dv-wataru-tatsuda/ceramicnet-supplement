@@ -1,14 +1,12 @@
-cff-version: 1.2.0
-message: "If you use this code or dataset, please cite the following publication."
+cff-version: 1.2.1
 title: "Deep learning-based morphological classification of ceramics: A case study of 3D Point Cloud Analysis for Sue ware, Japan"
-version: "1.0.0"
-doi: 10.XXXXX/osf.io/placeholder  # Will be replaced with actual DOI after the peer review
-license: MIT
-url: https://osf.io/placeholder  # Will be replaced with actual URL after the peer review
+version: "1.0.3
+doi: 10.1016/j.jas.2026.106472
+license: CC BY 4.0
 authors:
   - family-names: Tatsuda
     given-names: Wataru
-    orcid: 0009-0008-0773-7546 
+    orcid: 0009-0008-0773-7546
   - family-names: Hori
     given-names: Ryo 
   - family-names: Morikawa
