@@ -1,6 +1,6 @@
 ### Overview
 
-[![DOI](https://zenodo.org/badge/989476385.svg)](https://doi.org/10.5281/zenodo.15523451)
+[![DOI](https://zenodo.org/badge/989476385.svg)](https://doi.org/10.5281/zenodo.18262381)
 
 This repository contains the supplementary material of the following paper:
 
